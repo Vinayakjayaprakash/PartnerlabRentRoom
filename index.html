@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Reservation App</title>
+</head>
+<body>
+    <h1>Room Reservation System</h1>
+
+    <!-- Add User -->
+    <h2>Add User</h2>
+    <input type="text" id="usernameInput" placeholder="Enter username">
+    <button onclick="addUser(document.getElementById('usernameInput').value)">Add User</button>
+
+    <!-- Create Reservation -->
+    <h2>Create Reservation</h2>
+    <input type="text" id="resUsername" placeholder="Username">
+    <input type="date" id="startDate" placeholder="Start Date">
+    <input type="time" id="startTime" placeholder="Start Time">
+    <input type="number" id="hours" placeholder="Number of Hours">
+    <button onclick="createReservation(document.getElementById('resUsername').value, document.getElementById('startDate').value, document.getElementById('startTime').value, document.getElementById('hours').value)">Create Reservation</button>
+
+    <!-- Update Reservation -->
+    <h2>Update Reservation</h2>
+    <input type="text" id="upUsername" placeholder="Username">
+    <input type="date" id="upstartDate" placeholder="Start Date">
+    <input type="time" id="upstartTime" placeholder="Start Time">
+    <input type="number" id="uphours" placeholder="Number of Hours">
+    <button onclick="updateReservation(document.getElementById('upUsername').value, document.getElementById('upstartDate').value, document.getElementById('upstartTime').value, document.getElementById('uphours').value)">Update Reservation</button>
+
+
+    <!-- Delete Reservation -->
+    <h2>Delete Reservation</h2>
+    <input type="text" id="delUsername" placeholder="Username">
+    <button onclick="deleteReservation(document.getElementById('delUsername').value)">Delete Reservation</button>
+
+    <!-- Get User Reservation -->
+    <h2>Get User Reservation</h2>
+    <input type="text" id="getUserRes" placeholder="Username">
+    <button onclick="getUserReservation(document.getElementById('getUserRes').value)">Get Reservation</button>
+
+    <!-- Get All Reservations -->
+    <h2>Get All Reservations</h2>
+    <button onclick="getAllReservations()">Get All Reservations</button>
+<hr>
+<pre id="main"></pre><br>
+<table id="resultsTable">
+
+    <tbody id="resultsBody">
+
+    </tbody>
+</table>
+<hr>
+
+    <script src="client.js" defer></script>
+</body>
+</html>
